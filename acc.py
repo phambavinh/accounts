@@ -8,7 +8,7 @@ with open("accounts.txt") as fo:
     accs = [line.strip() for line in fo]
 random.shuffle(accs)
 
-with open("data.json") as f:
+with open("Phambavinh.json") as f:
     d = json.load(f)
 
     new_accs = {}
@@ -26,5 +26,5 @@ with open("data.json") as f:
             d["Accounts"][key][k2]["Username"] = users[idx]
             idx += 1
 
-with open("acc_result.json", mode='w') as f1:
+with open("ans.json", mode='w') as f1:
     json.dump(d, f1, indent=4)
